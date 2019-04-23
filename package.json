@@ -1,7 +1,6 @@
 {
   "name": "star-planets",
   "version": "1.0.0",
-  "author": "Meriellen Silveira <merysilveira@gmail.com>",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
