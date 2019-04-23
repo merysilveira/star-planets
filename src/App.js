@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import List from './List';
-import Next from './Next';
 import axios from 'axios';
 import './App.css';
 
@@ -11,14 +10,14 @@ class App extends Component {
 
         this.state = {
             planet: [],
-        }
+        };
 
         this.getPlanet = this.getPlanet.bind(this);
         this.getPlanets = this.getPlanets.bind(this);
     }
 
     getPlanets() {
-        return axios.get('https://swapi.co/api/planets/')
+        return axios.get('https://swapi.co/api/planets/');
     }
 
     getPlanet(id='') {
@@ -33,15 +32,15 @@ class App extends Component {
     }
 
     componentDidMount(){
-        this.getPlanets().then((response) => {
-            const count = response.data.count
-            const randId = Math.floor((Math.random() * count) + 1)
-            this.getPlanet(randId)
-        })
+        this.nextPlanet();
     }
 
-    refreshPage(){ 
-        window.location.reload()
+    nextPlanet(){
+        this.getPlanets().then((response) => {
+          const count = response.data.count;
+          const randId = Math.floor((Math.random() * count) + 1);
+          this.getPlanet(randId);
+        });
     }
 
     render() {
@@ -49,9 +48,9 @@ class App extends Component {
         return (
             <React.Fragment>
                 <div className="planet__wrap">
-                    <List planet={planet} />
+                    <List planet={planet}/>
                 </div>
-                <Next planet={planet} /> 
+                <button className="planet_next__button" type="button" onClick={() => this.nextPlanet()}>Next</button>
             </React.Fragment>
         );
     }

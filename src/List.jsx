@@ -11,8 +11,8 @@ class List extends Component {
     			return (
     				<div key={pl.url}>
     					<div className="planet__header">
-                            <h1 className="planet__header_name">{pl.name}</h1>
-                        </div>
+							<h1 className="planet__header_name">{pl.name}</h1>
+						</div>
     					<ListInfo listInfo={pl} />
     				</div>
     			)
