@@ -14,7 +14,6 @@ class List extends Component {
                             <h1 className="planet__header_name">{pl.name}</h1>
                         </div>
     					<ListInfo listInfo={pl} />
-                        
     				</div>
     			)
     		})
