@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import List from './List';
+import Next from './Next';
 import axios from 'axios';
 import './App.css';
 
@@ -39,12 +40,19 @@ class App extends Component {
         })
     }
 
+    refreshPage(){ 
+        window.location.reload()
+    }
+
     render() {
         const {planet} = this.state;
         return (
-            <div className="planet__wrap">
-                <List planet={planet} />
-            </div>
+            <React.Fragment>
+                <div className="planet__wrap">
+                    <List planet={planet} />
+                </div>
+                <Next planet={planet} /> 
+            </React.Fragment>
         );
     }
 
