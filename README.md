@@ -19,6 +19,4 @@ $ npm run start
 
 Irá abrir em [`http://localhost:3000`](http://localhost:3000).
 
-Todas as páginas estão escritas em [markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) e localizada no diretório `content`. Execute `npm run markdown:watch` para compilá-los para arquivos HTML ao alterar o arquivo.
-
 
