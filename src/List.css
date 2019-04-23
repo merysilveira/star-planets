@@ -1,0 +1,15 @@
+.planet__header {
+    border-bottom: 4px solid var(--cor-amarelo);
+    padding: 30px;
+}
+
+    .planet__header_name {
+        color: var(--cor-amarelo);
+        font-family: "STARWARS";
+        font-size: 45px;
+        font-weight: bold;
+        letter-spacing: 5px;
+        margin-bottom: 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
